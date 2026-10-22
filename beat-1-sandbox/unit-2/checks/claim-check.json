@@ -1,0 +1,55 @@
+{
+  "evaluator": "ChatGPT/Codex",
+  "mode": "live-claim-only",
+  "result": {
+    "item": "https://github.com/codepath/pathreview-ai301-fa26-s1/issues/73",
+    "checks": [
+      {
+        "name": "claim-specific",
+        "grade": "pass",
+        "evidence": "Names Quick Start's OPENROUTER_API_KEY versus the template's omitted key/mock-openai options; commits to a recorded-revision comparison and posting commands, output, and result."
+      },
+      {
+        "name": "environment-identifiable",
+        "grade": "unclear",
+        "evidence": "not yet applicable: claim-only draft"
+      },
+      {
+        "name": "steps-rerunnable",
+        "grade": "unclear",
+        "evidence": "not yet applicable: claim-only draft"
+      },
+      {
+        "name": "observable-evidence",
+        "grade": "unclear",
+        "evidence": "not yet applicable: claim-only draft"
+      },
+      {
+        "name": "issue-target-matched",
+        "grade": "unclear",
+        "evidence": "not yet applicable: claim-only draft"
+      },
+      {
+        "name": "outcome-supported",
+        "grade": "unclear",
+        "evidence": "not yet applicable: claim-only draft"
+      },
+      {
+        "name": "repo-conventions",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md asks contributors to comment on the issue; the claim identifies #73 and its investigation, and discloses ChatGPT assistance in a hosted Linux workspace."
+      },
+      {
+        "name": "communication-usable",
+        "grade": "pass",
+        "evidence": "Two direct paragraphs state the particular docs discrepancy and next investigation, with a report commitment and no promised fix, date, hostility, or pressure."
+      },
+      {
+        "name": "evidence-easy-to-locate",
+        "grade": "unclear",
+        "evidence": "not yet applicable: claim-only draft"
+      }
+    ],
+    "verdict": "accept"
+  }
+}

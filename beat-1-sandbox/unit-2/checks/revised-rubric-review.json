@@ -1,0 +1,224 @@
+{
+  "evaluator": "ChatGPT/Codex",
+  "mode": "frozen-partial-review",
+  "agreement": [
+    4,
+    4
+  ],
+  "rubric_sha256": "bf96e770d9a3766f3771f66e4f064e6ecb5ebbe1e70ad275a69fea827efccb0f",
+  "evidence_guide_sha256": "156b3015076454e35bea4cb3571a3f7add9130e7d9d6c1caf93462da69fb039b",
+  "results": [
+    {
+      "id": "pkg-03",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names adjacent replaced-match numbering and plans to inspect standard printer line-number computation following the owner's pointer."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "ripgrep15.2.0 cargo on Arch Linux x86_64 identifies tested state; issue13.0.0 difference is explicit."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "References the exact twelve fixture lines supplied in the frozen issue and gives the complete multiline replacement command."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds numbered results1,2,3,4 and records correct1,4,7,10 when replacement is removed."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Exercises adjacent multiline matches with the owner's required --replace condition and shows wrong original-line numbering."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion follows shown numbering and control without claiming a tested cause/fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Supplies requested report information; specific engagement with replacement and standard-printer guidance satisfies revised own-words rule, with no contrary provenance or disclosure mandate."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Concise claim/report distinguish original starting lines from actual numbering without pressure or guarantees."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Command/output and Expected/Actual connect numbering artifact directly to replacement trigger."
+        }
+      ]
+    },
+    {
+      "id": "pkg-09",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names scenario2 size-flush reordering, offers evidenced failed attempt and next acceptance-test investigation without promising a fix/date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "fd10.4.2 pacman, Arch Linux x86_64/kernel6.15 and ARG_MAX2097152 identify relevant executable and platform limit."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Supplies full file-generation loop and two marker commands for the shown baseline attempt; unspecified padding runs are supplementary."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds log order ONE/ONE/ONE/TWO/TWO/TWO from attempted batch ordering test."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Attempts described --exec-batch operation, shows marker result and explicitly discloses uncertainty that TWO hit its limit first; revised rule does not require proving that condition."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Cannot-reproduce conclusion is bounded by explicit unmet/uncertain flush condition and does not disprove issue or claim a tested fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Version/OS, operation, expected/actual and specific engagement are present; frozen policy asks AI disclosure for PRs, not issue comments, and supplies no contrary authorship evidence."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Clear report separates failed attempt, obtained marker order and trigger uncertainty without pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Marker commands/output and What differed section connect obtained order to qualified conclusion."
+        }
+      ]
+    },
+    {
+      "id": "pkg-20",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names wrong single-theme mode2031 response and proposes patch tests across single/paired themes, reporting back before PR."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Ghostty1.3.1 Fedora42 RPM release, GTK/GNOME48 Wayland and dark scheme identify build/backend/settings."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Supplies complete theme settings, isolated launch options and exact terminal query/capture command."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds single-theme997;2 light response and paired-theme997;1 dark control."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Tests issue's isolated dark scheme with single versus conditional themes and shows the specified wrong/correct responses."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion confines result to displayed release-build response discrepancy without claiming a tested patch or cause."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Explicit any-AI disclosure policy applies; neither comment supplies tool-and-extent disclosure or explicit no-AI statement required by revised rule."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Specific claim/report distinguish expected dark from actual single-theme light response without pressure or fix guarantee."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Single-theme/control captures and Actual clearly connect each response to its configuration."
+        }
+      ]
+    },
+    {
+      "id": "pkg-08",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "Generic destructuring claim asserts full analysis but omits specific invalid-path discrepancy and a concrete next investigation action."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "jq1.8.2 Homebrew on macOS15.5 arm64 identifies tested version/platform."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Complete jq -n expression is supplied with no unavailable fixture."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds undefined-$b compile error for supplied expression."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Changes issue's expression ending in . to one ending in $b; compile failure is adjacent to, rather than reproduction of, reported runtime invalid-path behavior."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Calls different compile error conclusive confirmation of issue; unsupported certainty exceeds artifact."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Provides requested OS/version, command, actual/expected; frozen facts have no AI disclosure policy."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Repeated claims that compile failure exactly confirms issue mislead about demonstrated behavior despite headings."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Single expression/error block and Expected/Actual expose mismatch directly."
+        }
+      ]
+    }
+  ]
+}

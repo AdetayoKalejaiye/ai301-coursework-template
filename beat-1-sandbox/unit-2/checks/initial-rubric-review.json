@@ -1,0 +1,1093 @@
+{
+  "evaluator": "ChatGPT/Codex",
+  "mode": "frozen-scored-review",
+  "revision": "initial rubric before the target and conventions revisions",
+  "agreement": [
+    17,
+    20
+  ],
+  "categories": {
+    "clear-accept": [
+      5,
+      8
+    ],
+    "wrong-target": [
+      4,
+      4
+    ],
+    "no-evidence": [
+      4,
+      4
+    ],
+    "unfollowable-comms": [
+      3,
+      3
+    ],
+    "disclosure": [
+      1,
+      1
+    ]
+  },
+  "results": [
+    {
+      "id": "pkg-01",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names the one-custom-header Content-Type omission and plans to inspect apply_missing_repeated_headers against multidict versions, reporting findings."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "HTTPie 3.2.4 pip, Python 3.12.4, multidict 6.6.0 and macOS 14.5 arm64 identify the tested release/dependency state."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Both offline commands include complete header/body arguments; no server, fixture or unavailable file is required."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds one-header request without Content-Type and zero-header control with Content-Type: application/json."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "The one-custom-header JSON request shows the reported header omission; offline request printing tests the same request-construction discrepancy."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion confines the observation to the shown one-header omission and successful zero-header control; no verified fix/cause claimed."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Latest HTTPie release is identified and minimal steps are supplied; new-issue duplicate-search checkboxes do not require a second issue template for this thread report."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Concise issue-specific claim/report separate expected JSON Content-Type from actual absent header, without promises or pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Trigger and control blocks are separately labeled and Actual directly connects their header difference to the conclusion."
+        }
+      ]
+    },
+    {
+      "id": "pkg-02",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Claim names huge --line-range crash and next validation investigation in line_range.rs without a guaranteed fix/date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "bat 0.26.1 cargo, rustc 1.96.0 and Fedora 44 x86_64/kernel identify the executable and platform."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Complete printf pipeline, range argument, stdin marker and exit-code command reproduce the supplied attempted validation error."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds invalid-value diagnostic and exit 1 from the shown range command."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Uses '18446744073709551614:' rather than issue's offset-from-end ':-18446744073709551614'; graceful validation exit 1 is not capacity-overflow panic/101."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Calls validation rejection a confirmed crash although the artifact shows a different range syntax and error that already meets its stated graceful-rejection expectation."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Supplies requested version/install/environment, command, actual output and expected behavior; no frozen AI policy."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Repeated claims of exactly reproduced crash misrepresent the supplied validation error despite legible formatting."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Single command/output/exit-code block makes the syntax and result mismatch immediately locatable."
+        }
+      ]
+    },
+    {
+      "id": "pkg-03",
+      "verdict": "reject",
+      "gold": "accept",
+      "agree": false,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names adjacent replaced matches and plans to inspect standard-printer line-number computation, following the owner's pointer."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "ripgrep 15.2.0 cargo on Arch Linux x86_64 identifies tested state; explicitly contrasts issue version 13.0.0."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Precisely references the exact twelve lines present in the frozen issue and supplies complete multiline --replace command."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds output 1:fnord, 2:boccob, 3:d321fdddffff, 4:clowns and records correct numbering without replacement."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Exercises adjacent multiline matches plus required replacement flag, showing 1/2/3/4 instead of original starting lines 1/4/7/10."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion follows embedded wrong numbering and the stated replacement-control observation; no cause or fix asserted."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "unclear",
+          "evidence": "Report fields are supplied, but frozen policy requires human-written comments; bundle supplies no authorship/process evidence verifying that condition."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Relevant claim and short report distinguish expected original line numbers from actual replaced-output numbering without pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Command/output and Expected/Actual lines directly connect the line-number artifact to the required replacement condition."
+        }
+      ]
+    },
+    {
+      "id": "pkg-04",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "+1 and requests for updates give no next investigation step or commitment to report observations."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "unclear",
+          "evidence": "No tested fzf version/revision, OS, shell or terminal size is supplied."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "No concrete tabbed/NUL-separated payload, terminal dimensions or command sequence is supplied."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "unclear",
+          "evidence": "'Can confirm' and 'just like the screenshots' provide no embedded screenshot or concrete recorded trigger result."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "unclear",
+          "evidence": "No identifiable attempt establishes the width/tab/payload conditions or whether the same display corruption occurred."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Claims definitely still a bug from unsupported 'same behavior' assertions rather than a recorded attempt."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Requested OS, shell and reproduction information are absent; existing-report references do not supply this candidate's environment/input."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Repeated annoyance/fix requests pressure maintainers and replace investigation/proof with general confirmation."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "unclear",
+          "evidence": "No deciding artifact or identifiable reproduction step is supplied."
+        }
+      ]
+    },
+    {
+      "id": "pkg-05",
+      "verdict": "reject",
+      "gold": "accept",
+      "agree": false,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names EnvironmentSectionNotValid contaminating --json stdout and plans to trace exception emission then report findings."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Conda 26.7.0 miniforge3, Python 3.12.7, macOS15.5 osx-arm64 and libmamba identify the reported configuration."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "env.yml contents are not supplied: 'valid dependencies list plus category section' leaves material YAML input/dependency values to guess."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds warning before JSON and json.tool failure 'Expecting value: line 1 column 1'."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Exercises env update --quiet --json with an unrecognized category section and discarded stderr, showing non-JSON stdout."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Observed warning-plus-JSON and parser failure support the stated stdout contamination; no untested implementation cause claimed."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Provides environment summary but not explicitly requested conda info/conda list outputs; the report's material YAML fixture is also absent."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Relevant report clearly separates expected one JSON document from actual leading warning and shows parser consequence."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "First output shows stream contamination; second labeled parser attempt establishes why the stream cannot parse."
+        }
+      ]
+    },
+    {
+      "id": "pkg-06",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names tunnel route loop and plans to inspect Windows route-output parsing without a guaranteed fix/date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "unclear",
+          "evidence": "No minikube version/revision, OS record or driver is identified; Windows-style route text does not identify the tested driver/configuration."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "Generic minikube start omits explicit driver/configuration and service setup underlying the shown hello-node route; no precise setup reference."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds three repeated identical route ADD lines with retry messages between them."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "unclear",
+          "evidence": "Shows a tunnel route-add retry loop, but missing driver/OS and raw route-result context leave the issue's affected Windows configuration unverified."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion reports the displayed repeated ADD/retry behavior and lack of readiness without claiming a tested parsing cause or fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Requested OS, driver, full failed-command output and minikube logs are absent; only an excerpt is supplied."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Specific claim and readable command/log report distinguish one successful route from repeated retries without pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Output is labeled as step 2 and Expected/Actual explicitly connect the repeated route lines to the loop."
+        }
+      ]
+    },
+    {
+      "id": "pkg-07",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names Japanese-first FES translation failure and plans to inspect locale-loading timing; explicitly describes assistive AI and personal verification."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "p5.js1.11.7 CDN, Chrome139 macOS14.6 and Japanese-then-English language order identify relevant versions/settings and contrast affected older releases."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Supplies complete minimal setup sketch, exact p5 version, browser setting, reload/console trigger and English-first control."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds non-English replaceAll/translator errors and English-first reserved-function message."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Runs the issue's let value=0 setup trigger with non-English-first language and shows the specified failure versus English control."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Observed TypeError replacing the English message supports the reported symptom; expected fallback reflects issue expectation without claiming a tested fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Requested library/browser/OS/settings, steps and expected/actual are supplied; claim states assistive AI organization plus human execution/understanding."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Clear issue-specific investigation/report, factual control and assistance statement without promises or hostility."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Japanese-first and English-first console blocks label both deciding artifacts next to their steps."
+        }
+      ]
+    },
+    {
+      "id": "pkg-08",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "Generic destructuring-bug claim asserts full analysis and compiler understanding but omits the particular invalid-path discrepancy and a concrete next investigation action."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "jq1.8.2 Homebrew on macOS15.5 arm64 identifies tested release/platform."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Complete jq -n expression is included and can be run without a fixture."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds undefined-$b compile-error output from the attempted expression."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Changes issue's path({} as {$a} | .) runtime invalid-path case to a different expression ending in $b and shows compile failure instead."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Calls different compile error conclusive confirmation of the reported path-traversal bug without exercising its expression/result."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Supplies requested OS/jq version, command, actual and expected behavior; no frozen AI policy."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Polished certainty that an unrelated compile failure confirms the issue misleads about actual behavior."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "One expression/error block and Expected/Actual make the deciding mismatch easy to inspect."
+        }
+      ]
+    },
+    {
+      "id": "pkg-09",
+      "verdict": "reject",
+      "gold": "accept",
+      "agree": false,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names scenario2 argument-size flush reordering, reports failed attempt, and proposes work toward the thread's acceptance test rather than promising a fix."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "fd10.4.2 pacman, Arch Linux x86_64/kernel and ARG_MAX2097152 identify relevant state/limit."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Supplies directory creation, complete filename-generation loop and two marker commands for the shown attempt; added-padding runs lack exact commands but are supplementary."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds order.log output ONE/ONE/ONE/TWO/TWO/TWO from the described attempt."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Scenario2 requires a later command hitting its size limit first; identical visible commands do not establish this, and author admits padding may not achieve it."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Honestly limits result to inability to provoke reordering and acknowledges the missing unequal-flush condition; no claim of disproof or tested fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Version/OS, bug/expectation and concrete attempt are present; frozen policy requires AI disclosure for PRs, not issue comments, and supplies no evidence of forbidden authorship."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Specific, candid cannot-reproduce report separates obtained marker order from intended condition and limitations without pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Marker commands/output and What differed section directly expose the attempted ordering test and its limitation."
+        }
+      ]
+    },
+    {
+      "id": "pkg-10",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names symlink directory disappearance, reports failed Linux/zsh attempt and plans macOS/fish testing plus contract_repo_path inspection."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Starship1.26.0 cargo, zsh5.9 Ubuntu24.04 x86_64 are explicit; macOS/fish difference and physical-PWD observation are explained."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Supplies repo/subdirectory/symlink creation, exact repo_root_style config and cd trigger; records prompt and starship explain inspection."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Shows rendered monorepo/packages/app-dir prompt and explicitly records directory module present in explain."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Tests the specified symlink-to-repo-subdirectory layout and repo_root_style setting, showing a different result under explicitly different OS/shell."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Confines cannot-reproduce to Linux/zsh and treats logical-PWD/fish explanation as a hypothesis rather than disproving the issue."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Provides requested version, shell, OS, relevant config, steps, expected and actual; no second new bug-report filing is required for a thread comment."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Clear report distinguishes expected issue symptom from actual successful rendering and identifies limitations without pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Steps, stripped prompt, explain observation and What differed discussion clearly connect the attempt to the bounded conclusion."
+        }
+      ]
+    },
+    {
+      "id": "pkg-11",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names character-dependent multiline-emitter discrepancy and plans to check vendored go-yaml fix before changing emitter code, reporting back."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "yq4.53.3 Homebrew macOS15.5 arm64 identifies tested state and explicitly notes different OS/install from issue."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Complete printf fixtures for YAML, \ud83d\udea7 markdown and \u2705 control plus exact load_str commands are supplied."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds escaped single-line \ud83d\udea7 output and multiline block-scalar \u2705 output."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Exercises issue's multiline load_str update with the distinguishing Unicode characters, reproducing style difference."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion follows the shown scalar-style difference and does not claim a verified implementation fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Requested version/OS/install, concise input, command, actual and expected are supplied; no stated AI policy."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Short specific claim/report distinguish expected block scalar from actual escaped line without promises or pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Broken and control command/output blocks are labeled and Actual names the corresponding difference."
+        }
+      ]
+    },
+    {
+      "id": "pkg-12",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names comment-first range-closing corruption, proposes tracing boundaries from prior fix and reporting investigation rather than guaranteeing a fix/date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Prettier3.9.6 fresh npm install, Node22.23.1 and macOS14.6 arm64 identify tested state and contrast issue3.8.4."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Frozen issue supplies both complete input strings; report identifies prettier.format, parser babel and exact start/end pairs, sufficient to reconstruct the two calls despite omitted wrapper script."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds shapeA `};);` output/parse error and shapeB `};;` output."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Both specified arrow/comment/range shapes produce the exact outside-range closing-token corruptions described in the issue."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion is limited to the two shown shape corruptions on3.9.6; no cause/fix asserted."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Version, materially runnable two-call reproduction, input context, actual outputs and expected unchanged inputs are supplied; no disclosure mandate."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Relevant claim/report separate malformed/extra-token observations and expectation without pressure or misleading guarantees."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Separate shapeA/shapeB output blocks and Expected/Actual connect each corruption to its input/range."
+        }
+      ]
+    },
+    {
+      "id": "pkg-13",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "Claim says it wants to help and assigns itself but gives no relevant next investigation action or reporting commitment."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "unclear",
+          "evidence": "Windows11/RTX4080/64GB are given, but Terminal version, Windows build, display configuration and relevant TUI versions are absent."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "No concrete workload/version, rendering config or repeatable prolonged-session procedure is supplied."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Records concrete before/after observation: desktop choppy after long Claude Code session and still choppy after Terminal restart."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "unclear",
+          "evidence": "Terminal-restart persistence is described, but no DWM-restart recovery test or controlled workload/config establishes the distinguishing issue behavior."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "'definitely the DWM bug', guaranteed reproducibility and ruling out hardware exceed the supplied uncontrolled observation."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Explicitly requested Terminal version, Windows build and meaningful reproduction details are missing."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Unsupported100% certainty and 'desperately needs a fix' pressure replace a bounded investigation/report."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Brief prose directly connects session lag and Terminal-restart observation to its conclusion, although proof is insufficient elsewhere."
+        }
+      ]
+    },
+    {
+      "id": "pkg-14",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names startup-layout dead-pane race and next layout-apply bisection without guaranteeing a fix/date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "zellij0.44.3 cargo, Windows11 build10.0.26100 and Windows Terminal1.24 record tested state; terminal differs visibly from source Alacritty."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "Mentions an issue layout file but supplies neither KDL contents nor exact startup/dump-screen commands; material cwd/layout input unavailable."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds zellij version and session-list output, plus concrete observation of all three tabs present; promised screenshot is not supplied."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Setup/session success does not show a blank input-dead pane, dump-screen emptiness or stalled ApplyLayout log."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Claim says dead pane reproduced, but artifacts only establish session/tab setup, which does not demonstrate the issue."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Supplies version/terminal/OS, relevant scenario and observation; frozen guide requests minimal reproduction but does not mandate exact headings or AI disclosure."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Confident dead-pane reproduction claim conflicts with setup-only Actual observation and misleads about the proven result."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Setup evidence is labeled and tied directly to the stated tab/session observation, making the absence of dead-pane evidence easy to see."
+        }
+      ]
+    },
+    {
+      "id": "pkg-15",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "Asserts exact root cause and a fix approach soon but gives no concrete next investigation step; unsupported diagnosis substitutes for claim investigation."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Joplin3.7.10 and Windows11 identify issue-relevant app/OS state; no unrelated patch versions are required."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "No recorded input/note-switch sequence or precise reference saying the issue steps were followed; causal narrative supplies no rerunnable attempt."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "unclear",
+          "evidence": "'change is lost, exactly as issue describes' gives no concrete recorded input/result, screenshot, log or identifiable attempted trigger."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "unclear",
+          "evidence": "No identifiable fast-switch attempt/artifact establishes RichText timing and actual loss under the issue's conditions."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Exact debounce/loadNote cause, verified-race certainty and proposed flush fix have no inspectable execution/source/test proof."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Requested logs and desktop version information are absent, and candidate's own reproduction information is missing."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Confident unsupported root-cause/fix assertions obscure the distinction between claimed diagnosis and demonstrated behavior."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "unclear",
+          "evidence": "No deciding artifact or identifiable attempt is supplied to connect to a step and conclusion."
+        }
+      ]
+    },
+    {
+      "id": "pkg-16",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names tuple-name creation/rename discrepancy and plans to inspect scalar wrapping in Index.set_names then report findings."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "pandas1.5.3 pip, Python3.10.12 Ubuntu22.04 x86_64 identify tested older environment explicitly rather than implying current main."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Complete import, DataFrame/Index construction and rename_axis expression supply all input/trigger code."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds ValueError: Length of new names must be1, got3 after successful tuple-name construction."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Same tuple name succeeds at creation and fails in exact rename_axis operation, matching the described behavior."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion reports the demonstrated discrepancy in the explicitly recorded1.5.3 environment without claiming verification on current main."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Frozen template asks confirmation on latest/main and pd.show_versions output; candidate tests only1.5.3 and omits that output."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Specific concise report separates creation success, rename error and expected consistency without pressure or causal overclaim."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Single REPL/traceback block followed by Expected/Actual directly connects trigger and failure."
+        }
+      ]
+    },
+    {
+      "id": "pkg-17",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names sixel failure and next sixel-output-path investigation; no guaranteed fix/date, although its reproduction claim fails downstream evidence checks."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Store Terminal1.24.11911.0, Windows26300.9032, PowerShell7.6.4 and Sixel1.1.2 are recorded; Store-versus-main difference is explicit."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "Unshared test.png is specified only by dimensions/color count; maintainer asked specific trigger details and actual file/content is unavailable."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Records raw escape text, no image, window remaining open and returned prompt from ConvertTo-Sixel."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Issue is a terminal-process crash on main Release build; supplied Store-release observation leaves window alive and prompt returned."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Claims confirmed same crash and broader Store-release impact even though concrete observation shows a different non-crashing display failure."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Requested terminal/Windows/software versions, steps and expected/actual are supplied; no frozen AI rule."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Repeated end-to-end crash confirmation conflicts with the explicit surviving-window observation and misleads despite readable headings."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Observed result and Conclusion clearly locate the surviving-window evidence that contradicts claimed crash."
+        }
+      ]
+    },
+    {
+      "id": "pkg-18",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "Names gomodguard panic but gives no concrete next investigation beyond optional upstream coordination; workplace motivation is not an investigation step."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "golangci-lint1.55.2 binary, Go1.21 and macOS14 identify the tested environment; no irrelevant exact patch required."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "fail",
+          "evidence": "Explicitly withholds company layout, gomodguard config and precommit invocation, so a stranger cannot reconstruct material setup/input."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds gomodguard parse-module/nil-pointer/processFiles/goanalysis_metalinter panic lines from the claimed hook."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "unclear",
+          "evidence": "Same panic family is shown, but private layout/config and absent directory-rename trigger leave issue's distinguishing conditions unverified."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Reports its private-environment panic and root-module control, qualifying subdirectory relevance as 'looks essential' rather than claiming a tested fix/certain cause."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "Required configuration, Go environment details and code example are not supplied; unshareable company configuration cannot satisfy those requests."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Plain report identifies its privacy limits and contrasts expected findings/config error with actual panic without pressure."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Trimmed panic block is introduced as output of described precommit step and directly referenced by Actual."
+        }
+      ]
+    },
+    {
+      "id": "pkg-19",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "Generic enthusiasm/assignment request does not name selector/deep/nesting discrepancy and guarantees a fix within2days."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "compiler-sfc3.6.0-rc.2 official playground, Chrome139 and macOS14.6 identify relevant compiler/browser/platform."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Report precisely references frozen issue's complete scoped selector/deep/nested style, recreates it in playground and identifies CSS-pane inspection; material style input is present."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds produced CSS with unscoped .a and scoped deep member, and records sibling .a acquiring red color."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Exercises selector list plus :deep member and nesting, showing missing scope on non-deep .a as specified."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion follows the shown missing scope and concrete sibling-style leakage; no cause/fix inferred."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Version, exact frozen style input, playground procedure and expected/actual supply substantive report information; second new-issue template/link not required for thread comment."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Flattery, assignment/reservation pressure and guaranteed2day fix violate usable communication despite a substantive reproduction."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Produced CSS and Expected/Actual directly identify missing .a scope and observed leakage."
+        }
+      ]
+    },
+    {
+      "id": "pkg-20",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names wrong single-theme mode2031 response and proposes draft-patch testing across single/conditional configs before PR, reporting back."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Ghostty1.3.1 Fedora42 RPM release, GTK/GNOME48 Wayland and dark scheme identify relevant backend/build/settings."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Complete single/paired theme contents, isolated launch options and exact terminal query/capture command are supplied."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds single-theme CSI997;2 response and conditional-pair CSI997;1 control."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Exercises isolated dark GTK configuration and query with single versus paired themes, showing issue's incorrect-light/correct-dark responses."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Conclusion confines result to shown1.3.1 release responses and does not claim tested patch/certain cause."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "unclear",
+          "evidence": "Frozen policy requires any AI use tool/extent disclosure and human review/editing; neither comment records disclosure or process, and bundle does not establish whether AI was used."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Specific claim/report distinguish expected dark response from actual single-theme light result without pressure or fix guarantee."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "First and control captures are separately labeled and Actual connects 997;2 versus997;1 to each configuration."
+        }
+      ]
+    }
+  ]
+}

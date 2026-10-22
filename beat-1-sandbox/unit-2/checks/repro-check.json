@@ -1,0 +1,56 @@
+{
+  "evaluator": "ChatGPT/Codex",
+  "mode": "live-full-package",
+  "rubric_sha256": "bf96e770d9a3766f3771f66e4f064e6ecb5ebbe1e70ad275a69fea827efccb0f",
+  "result": {
+    "item": "https://github.com/codepath/pathreview-ai301-fa26-s1/issues/73",
+    "checks": [
+      {
+        "name": "claim-specific",
+        "grade": "pass",
+        "evidence": "Claim names OpenRouter-key/template mismatch and promises recorded-revision inspection/copy output, without fix/date guarantee."
+      },
+      {
+        "name": "environment-identifiable",
+        "grade": "pass",
+        "evidence": "Report pins f89c06fc3ff292df2a04a39ac51319d32a76b779 from main and identifies Ubuntu24.04.3 x86_64 plus Git/Bash/Python tools."
+      },
+      {
+        "name": "steps-rerunnable",
+        "grade": "pass",
+        "evidence": "Includes clone/checkout, exact grep/show/copy/cmp/count commands and complete tracked template."
+      },
+      {
+        "name": "observable-evidence",
+        "grade": "pass",
+        "evidence": "Embeds setup instructions, full template, settings fields, identical-copy cmp result and copied-env key count0."
+      },
+      {
+        "name": "issue-target-matched",
+        "grade": "pass",
+        "evidence": "Inspects #73's exact named-key omission and mock/openai-only comment, with both configuration key fields shown."
+      },
+      {
+        "name": "outcome-supported",
+        "grade": "pass",
+        "evidence": "Conclusion limits reproduction to documentation discrepancy and excludes runtime support/crash/mock-key claims."
+      },
+      {
+        "name": "repo-conventions",
+        "grade": "pass",
+        "evidence": "Relevant requested report information is present; comments accurately identify ChatGPT assistance and hosted-Linux execution. No explicit repository AI disclosure rule was found."
+      },
+      {
+        "name": "communication-usable",
+        "grade": "pass",
+        "evidence": "Specific claim/ordered report distinguish consistent expected setup guidance from observed omitted key without promises, hostility or pressure."
+      },
+      {
+        "name": "evidence-easy-to-locate",
+        "grade": "pass",
+        "evidence": "Each numbered step pairs commands with output; final Expected/Actual links artifacts to bounded conclusion."
+      }
+    ],
+    "verdict": "accept"
+  }
+}

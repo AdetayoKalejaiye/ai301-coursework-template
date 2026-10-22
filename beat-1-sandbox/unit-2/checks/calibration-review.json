@@ -1,0 +1,222 @@
+{
+  "evaluator": "ChatGPT/Codex",
+  "mode": "frozen-calibration-review",
+  "agreement": [
+    4,
+    4
+  ],
+  "results": [
+    {
+      "id": "calib-01",
+      "verdict": "accept",
+      "gold": "accept",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "The claim names the stash UX/untracked-only case, points to the report below, and plans to investigate where the stash-name prompt decides to appear without guaranteeing a fix or date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Environment: lazygit 0.64.1 release binary, git 2.55.0, Ubuntu 24.04; explicitly contrasts the issue's v0.63.1 on Termux."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Supplies `git init -q t && cd t && touch new.txt`, the Files-panel focus / s / name test / Enter action, and stash-list/status commands; the literal fresh-repository starting state is visible."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "The report embeds empty `git stash list` output and `git status --short` output `?? new.txt`, and records that the popup closed with no message."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "Attempts the specified untracked-only Files-panel `s` action and records the issue's distinguishing result: closed prompt, no stash, unchanged untracked file, no notification."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "The conclusion is the observed no-op on the stated Linux release, with the unchanged file and empty stash list shown; no cause or tested fix is claimed."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Provides the requested lazygit version, git version, OS, description, and steps; frozen policy welcomes issue reports and has no AI disclosure requirement."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "Relevant claim and short report distinguish expected stash-or-explanation from the observed empty stash list and unchanged file, without pressure or filler."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "The single Steps and observed block puts trigger, stash-list result, and status result together; Actual directly explains those outputs."
+        }
+      ]
+    },
+    {
+      "id": "calib-02",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "The claim says `claiming this one, someone has to do it` but supplies no relevant next investigation step; it complains that search is basically broken."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "unclear",
+          "evidence": "The candidate supplies no tested Joplin version/revision, OS, or desktop version info; `all my machines` does not identify the configuration."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "No starting note, search input, commands, or reproducible action sequence is supplied beyond `whenever my search comes up empty`."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "unclear",
+          "evidence": "`Same here!!` and `exactly like the issue says` supply no inspectable log, screenshot, or concrete recorded before/after result from an identifiable attempt."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "unclear",
+          "evidence": "The candidate repeats the empty-search symptom but provides no identifiable attempt/input or artifact establishing that it tested the issue's target."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Claims `on all my machines`, `Everyone I know`, and `obviously the null result thing` without supporting environment, attempts, or causal evidence."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "fail",
+          "evidence": "The frozen template asks for OS, Joplin/desktop version info, current and expected behavior, and logs; the candidate omits the environment/version/log information."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "`can't believe ... never got fixed`, `should be the top priority`, and `Please fix it soon` pressure maintainers, while unsupported repetition obscures useful proof."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "unclear",
+          "evidence": "No deciding artifact or identifiable attempt is supplied to connect to a reproduction step and conclusion."
+        }
+      ]
+    },
+    {
+      "id": "calib-03",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "fail",
+          "evidence": "The claim calls this an HCL parsing issue and promises a fix proposal `shortly`, but does not identify the non-string-key panic or a concrete next investigation step; `complete and rigorous reproduction` is contradicted by its report."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "pass",
+          "evidence": "Names yq 4.53.3 via Homebrew, macOS 15.5 arm64, zsh 5.9, and explicitly notes testing a newer release than the issue's 4.53.2; the tested platform/install differences are visible."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "pass",
+          "evidence": "Shows the entire one-line fixture `intdict = { 1: {} }` and exact command `yq eval --input-format=hcl . input.hcl`; the attempted parse error can be repeated from those supplied inputs."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds the actual parse-error artifact: `Missing key/value separator; Expected an equals sign`, tied to the shown file and command."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "fail",
+          "evidence": "Issue input is `intdict = { 1 = {} }` and reaches `panic: not a string` in convertHclExprToNode; the candidate substitutes a colon and stops earlier at a syntax parse error."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "fail",
+          "evidence": "Calls the syntax error `exactly the class of failure` and claims `This confirms the reported bug`; the shown artifact never reaches the issue's non-string-key decoder panic, and repetition does not establish that target."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Supplies requested yq version, OS, installation method, concise input, command, actual behavior, and expected behavior; the frozen repo facts state no AI policy."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "fail",
+          "evidence": "Despite clear headings, confident statements that the earlier syntax failure confirms the numeric-key panic mislead the reader about expected versus observed issue behavior."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Preparation, Execution, Expected, and Actual label the one-line input, command, error, and conclusion so the deciding mismatch is easy to locate."
+        }
+      ]
+    },
+    {
+      "id": "calib-04",
+      "verdict": "reject",
+      "gold": "reject",
+      "agree": true,
+      "checks": [
+        {
+          "name": "claim-specific",
+          "grade": "pass",
+          "evidence": "Names this overflow issue and the exact-command panic report, then offers independent testing of the reporter's PR across build profiles without guaranteeing a fix or date."
+        },
+        {
+          "name": "environment-identifiable",
+          "grade": "unclear",
+          "evidence": "No tested hyperfine version/revision, OS, installation source, or build profile is identified, although the issue distinguishes debug panic from release wrap/hang."
+        },
+        {
+          "name": "steps-rerunnable",
+          "grade": "unclear",
+          "evidence": "The boundary and control commands are exact, but how to obtain the tested executable/debug build is absent; build profile materially determines whether the reported panic occurs."
+        },
+        {
+          "name": "observable-evidence",
+          "grade": "pass",
+          "evidence": "Embeds `thread 'main' panicked at src/parameter/range_step.rs:66:9: attempt to add with overflow` and a completed two-benchmark control output."
+        },
+        {
+          "name": "issue-target-matched",
+          "grade": "pass",
+          "evidence": "The attempt uses the issue's exact range 2147483646 through 2147483647 and shows the stated range-step overflow panic; the shifted 1-through-2 control completes."
+        },
+        {
+          "name": "outcome-supported",
+          "grade": "pass",
+          "evidence": "Expected is two in-range benchmarks and clean exit; Actual confines the conclusion to the displayed panic matching the issue's debug-build behavior, without claiming release-profile verification or a cause/fix."
+        },
+        {
+          "name": "repo-conventions",
+          "grade": "pass",
+          "evidence": "Frozen repo facts require describing the problem and how to reproduce it, with no structured template or AI policy; the comments supply the overflow symptom, exact command, output, and expectation."
+        },
+        {
+          "name": "communication-usable",
+          "grade": "pass",
+          "evidence": "The claim offers relevant independent testing and the report clearly separates boundary panic, successful control, expected behavior, and actual behavior without pressure or filler."
+        },
+        {
+          "name": "evidence-easy-to-locate",
+          "grade": "pass",
+          "evidence": "Boundary and control outputs are separately introduced, followed immediately by Expected and Actual statements connecting them to the conclusion."
+        }
+      ]
+    }
+  ]
+}

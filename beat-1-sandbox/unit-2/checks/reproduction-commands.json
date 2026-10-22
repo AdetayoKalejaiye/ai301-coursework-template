@@ -1,0 +1,74 @@
+{
+  "environment": {
+    "os": "Ubuntu 24.04.3 LTS",
+    "kernel": "6.18.55",
+    "architecture": "x86_64",
+    "bash": "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)",
+    "git": "git version 2.51.1",
+    "python": "3.12.14"
+  },
+  "results": [
+    {
+      "command": "git rev-parse HEAD",
+      "exit_code": 0,
+      "stdout": "f89c06fc3ff292df2a04a39ac51319d32a76b779\n",
+      "stderr": ""
+    },
+    {
+      "command": "git status --short",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "git grep -n OPENROUTER_API_KEY HEAD -- README.md docs/SETUP.md",
+      "exit_code": 0,
+      "stdout": "HEAD:README.md:24:# Configure environment (add your OPENROUTER_API_KEY to .env)\nHEAD:docs/SETUP.md:47:# Edit .env and set your OPENROUTER_API_KEY (required for AI features)\n",
+      "stderr": ""
+    },
+    {
+      "command": "cp .env.example .env",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "cmp .env.example .env",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -c 'from pathlib import Path; print('\"'\"'OPENROUTER_API_KEY occurrences in copied .env:'\"'\"', Path('\"'\"'.env'\"'\"').read_text().count('\"'\"'OPENROUTER_API_KEY'\"'\"'))'",
+      "exit_code": 0,
+      "stdout": "OPENROUTER_API_KEY occurrences in copied .env: 0\n",
+      "stderr": ""
+    },
+    {
+      "command": "git show HEAD:.env.example",
+      "exit_code": 0,
+      "stdout": "# =============================================================================\n# PathReview \u2014 Environment Variables\n# =============================================================================\n# Copy this file to .env and fill in the values.\n#   cp .env.example .env\n\n# Database\nDATABASE_URL=postgresql+asyncpg://pathreview:pathreview@localhost:5433/pathreview_dev\n\n# Redis\nREDIS_URL=redis://localhost:6379/0\n\n# Vector store (ChromaDB)\nVECTOR_DB_URL=http://localhost:8001\n\n# LLM provider\n# Options: \"mock\" (default, no API key needed), \"openai\"\nLLM_PROVIDER=mock\nOPENAI_API_KEY=sk-your-key-here\n\n# App settings\nAPP_ENV=development\nSECRET_KEY=dev-secret-key-change-in-production\nLOG_LEVEL=INFO\n\n# GitHub API (optional \u2014 only needed for testing GitHub analysis tools with real repos)\nGITHUB_TOKEN=ghp_your-token-here\n",
+      "stderr": ""
+    },
+    {
+      "command": "git grep -n -E 'llm_provider|openai_api_key|openrouter_' HEAD -- core/config.py",
+      "exit_code": 0,
+      "stdout": "HEAD:core/config.py:18:    llm_provider: str = Field(default=\"mock\")\nHEAD:core/config.py:19:    openai_api_key: str = Field(default=\"\")\nHEAD:core/config.py:20:    openrouter_api_key: str = Field(default=\"\")\nHEAD:core/config.py:21:    openrouter_base_url: str = Field(default=\"https://openrouter.ai/api/v1\")\nHEAD:core/config.py:22:    openrouter_model: str = Field(default=\"google/gemma-3-27b-it:free\")\n",
+      "stderr": ""
+    },
+    {
+      "command": "git status --short",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "evaluator": "ChatGPT/Codex",
+  "code_state": "f89c06fc3ff292df2a04a39ac51319d32a76b779",
+  "repository": "codepath/pathreview-ai301-fa26-s1",
+  "report_command_replay": {
+    "exit_code": 0,
+    "stdout": "f89c06fc3ff292df2a04a39ac51319d32a76b779\nHEAD:README.md:24:# Configure environment (add your OPENROUTER_API_KEY to .env)\nHEAD:docs/SETUP.md:47:# Edit .env and set your OPENROUTER_API_KEY (required for AI features)\nOPENROUTER_API_KEY occurrences in copied .env: 0\n# =============================================================================\n# PathReview \u2014 Environment Variables\n# =============================================================================\n# Copy this file to .env and fill in the values.\n#   cp .env.example .env\n\n# Database\nDATABASE_URL=postgresql+asyncpg://pathreview:pathreview@localhost:5433/pathreview_dev\n\n# Redis\nREDIS_URL=redis://localhost:6379/0\n\n# Vector store (ChromaDB)\nVECTOR_DB_URL=http://localhost:8001\n\n# LLM provider\n# Options: \"mock\" (default, no API key needed), \"openai\"\nLLM_PROVIDER=mock\nOPENAI_API_KEY=sk-your-key-here\n\n# App settings\nAPP_ENV=development\nSECRET_KEY=dev-secret-key-change-in-production\nLOG_LEVEL=INFO\n\n# GitHub API (optional \u2014 only needed for testing GitHub analysis tools with real repos)\nGITHUB_TOKEN=ghp_your-token-here\nHEAD:core/config.py:18:    llm_provider: str = Field(default=\"mock\")\nHEAD:core/config.py:19:    openai_api_key: str = Field(default=\"\")\nHEAD:core/config.py:20:    openrouter_api_key: str = Field(default=\"\")\nHEAD:core/config.py:21:    openrouter_base_url: str = Field(default=\"https://openrouter.ai/api/v1\")\nHEAD:core/config.py:22:    openrouter_model: str = Field(default=\"google/gemma-3-27b-it:free\")\n",
+    "stderr": "Cloning into 'pathreview-repro'...\nNote: switching to 'f89c06fc3ff292df2a04a39ac51319d32a76b779'.\n\nYou are in 'detached HEAD' state. You can look around, make experimental\nchanges and commit them, and you can discard any commits you make in this\nstate without impacting any branches by switching back to a branch.\n\nIf you want to create a new branch to retain commits you create, you may\ndo so (now or later) by using -c with the switch command. Example:\n\n  git switch -c <new-branch-name>\n\nOr undo this operation with:\n\n  git switch -\n\nTurn off this advice by setting config variable advice.detachedHead to false\n\nHEAD is now at f89c06f chore: track five more manifest entries against the tracker\n"
+  }
+}
