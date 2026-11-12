@@ -64,11 +64,11 @@ $ git diff --stat
 
 **Run history**
 
-No official score was produced: the supplied harness stopped before grading because the required `claude` executable is not installed in this environment.
+
 
 **Package analysis**
 
-Manual spot check: `pkg-02`. The rubric reads it as accept and the gold label is accept: the plan targets the two subtraction sites isolated by the reproduction, explicitly bounds the change, and reruns the reproduction with an observable exit-0 result. This is a manual review, not an official harness score.
+
 
 **Check rationale**
 
