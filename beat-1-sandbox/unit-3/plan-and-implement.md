@@ -64,10 +64,14 @@ $ git diff --stat
 
 **Run history**
 
+| Run | Change | Result |
+|---|---|---|
+| Full benchmark | Completed the 20-package plan-check benchmark with the finished rubric, evidence guide, and procedure | 20/20 agreement; 18/20 bar passed; every category floor passed |
 
 
 **Package analysis**
 
+The benchmark agreed on all 20 scored packages: 6/6 clear accepts, 4/4 scope-creep rejects, 2/2 thread-and-convention rejects, 3/3 unbuildable rejects, and 5/5 wrong-cause rejects. Required checks rejected every package with an ungrounded diagnosis, scope expansion, missing executable steps, or a thread/policy conflict; preferred checks did not gate a verdict.
 
 
 **Check rationale**
