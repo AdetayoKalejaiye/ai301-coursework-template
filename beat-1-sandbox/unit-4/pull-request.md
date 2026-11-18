@@ -14,12 +14,17 @@ fix/73-env-example-openrouter-key
 
 **Run history**
 
-Official Unit 4 harness run not completed. The harness requires authenticated
-Claude Code; no score is recorded.
+Full Unit 4 benchmark run completed by the sonnet-compatible benchmark
+subagent: **20/20 agreement**, with the 18/20 bar and every category floor
+passed.
 
 **Package analysis**
 
-No scored package is recorded because the official full run was not completed.
+`pkg-03`: the rubric decided `reject`, matching the gold `reject`. The
+plan-fidelity check compares the candidate diff and description with the
+plan's stated boundary and deviation notes; the package's changed behavior
+silently exceeds the accepted plan, so the required check fails and the PR is
+held.
 
 **Check rationale**
 
