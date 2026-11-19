@@ -59,11 +59,9 @@ one in the week it belongs to.
 
 During Unit 5, I turned my old issue-selection skill into an issue scout that searches Path Review with `gh` filters and ranks open issues against my fit profile. I wrote a strategy around small Python, documentation, and configuration fixes, recent repository activity, low comment counts, and issues without assignees, while keeping the grader focused on the required checks from Unit 1. The weak point was that the scan depended on GitHub and Claude authentication, so I could not treat an unverified read-out as a real issue pick. That pushed me to separate what the tool actually proved from what I still needed to check myself before claiming an issue.
 
-**Unit 6: [one line on the tool work]**
+**Unit 6: I added a voice guard and repo memory before working in the wild**
 
-[2-4 sentences: the voice-guard, the repo-memory file. What broke or
-fell short, and what changed because of it. "Nothing broke" counts when
-it is true - say how you know.]
+During Unit 6, I moved my voice guide into one shared voice-guard file, added rules for claims, questions, and follow-up pings, and wrote a local `CLAUDE.local.md` with PathReview's conventions, commands, and the files connected to issue #73. The guard ran and stopped my draft, but it could not complete the voice check because the Claude CLI was not authenticated in the workspace. I kept that stop in the guard log and changed my process so I will not treat a draft as ready until the checker can actually read it.
 
 **Unit 7: [one line on the tool work]**
 
