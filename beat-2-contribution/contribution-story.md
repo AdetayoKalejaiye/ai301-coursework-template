@@ -55,10 +55,9 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: I built an issue scout that ranks realistic Path Review issues**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+During Unit 5, I turned my old issue-selection skill into an issue scout that searches Path Review with `gh` filters and ranks open issues against my fit profile. I wrote a strategy around small Python, documentation, and configuration fixes, recent repository activity, low comment counts, and issues without assignees, while keeping the grader focused on the required checks from Unit 1. The weak point was that the scan depended on GitHub and Claude authentication, so I could not treat an unverified read-out as a real issue pick. That pushed me to separate what the tool actually proved from what I still needed to check myself before claiming an issue.
 
 **Unit 6: [one line on the tool work]**
 
