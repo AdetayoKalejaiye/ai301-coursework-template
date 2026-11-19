@@ -145,6 +145,7 @@ Independent rubric review with ChatGPT/Codex, in order:
 1. The four unscored calibration packages matched all four instructor labels using the initial rubric.
 2. A blind review of all 20 scored packages matched 17/20. All five categories had at least one match. The disagreements were pkg-03, pkg-05, and pkg-09.
 3. The target and conventions checks were revised. A focused recheck of pkg-03, pkg-09, pkg-20, and pkg-08 matched 4/4. The disclosure canary pkg-20 remained reject, and the adjacent-error canary pkg-08 remained reject. This was a partial review, not another full 20-package run.
+4. A complete benchmark subagent pass graded all 20 scored packages and matched the instructor labels 20/20, including the disclosure category floor.
 
 **Package analysis**
 
